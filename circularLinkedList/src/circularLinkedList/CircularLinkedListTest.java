@@ -7,9 +7,9 @@ public class CircularLinkedListTest {
 		MyCircularLinkedList list = new MyCircularLinkedList();
 		
 		System.out.println("공백리스트에 원소 3개 삽입하기");
-		list.insertLast("월");
-		list.insertLast("수");
-		list.insertLast("토");
+		list.insertFirst("월");
+		list.insertFirst("수");
+		list.insertFirst("토");
 		list.printList();
 		
 		System.out.println("수 다음에 금 삽입");
@@ -24,8 +24,8 @@ public class CircularLinkedListTest {
 		list.deleteMiddle("수");
 		list.printList();
 		
-		System.out.println("리스트의 첫번째 노드 삭제");
-		list.deleteFirst();
+		System.out.println("리스트의 마지막 노드 삭제");
+		list.deleteLast();
 		list.printList();
 	}
 
