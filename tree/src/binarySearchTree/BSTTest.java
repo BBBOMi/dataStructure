@@ -33,6 +33,15 @@ public class BSTTest {
 		else
 			System.out.println("검색 실패!");
 		
+		System.out.print("\"D\"삭제 >>>");
+		TreeNode p3 = BST.deleteBST('D');
+		if(p3 != null)
+			System.out.println("삭제 성공!");
+		else
+			System.out.println("삭제 실패!");
+		
+		System.out.print("BinaryTree >>> ");
+		BST.printBST();
 	}
 
 }

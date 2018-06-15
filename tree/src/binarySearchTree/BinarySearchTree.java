@@ -36,6 +36,47 @@ public class BinarySearchTree {
 		return p;
 	}
 	
+	public TreeNode deleteKey(TreeNode startNode, char x) {
+		TreeNode parent = startNode;
+		TreeNode p = startNode;
+		while(p != null && p.data != x) {
+			parent = p;
+			if(x < p.data) p = p.left;
+			else if(x > p.data) p = p.right;
+		}
+		
+		if(p == null) return p;
+		
+		if(p.left != null && p.right != null) {
+			TreeNode q = p.left;
+			while(q.right != null) { // 왼쪽 서브트리에서 가장 큰 값의 노드 찾기
+				q = q.right;
+			}
+			//parent.
+		} else if(p.left != null || p.right != null) {
+			if(p.left != null) {
+				if(parent.left == p)
+					parent.left = p.left;
+				else
+					parent.right = p.right;
+			} else {
+				if(parent.left == p)
+					parent.left = p.right;
+				else
+					parent.right = p.right;
+			}
+		} else {
+			if(parent.left == p) parent.left = null;
+			else parent.right = null;
+		}
+
+		return p;
+	}
+	
+	public TreeNode deleteBST(char x) {
+		return deleteKey(root, x);
+	}
+	
 	public void inorder(TreeNode root) {
 		if(root != null) {
 			inorder(root.left);
