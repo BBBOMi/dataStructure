@@ -41,7 +41,7 @@ public class AdjList {
 		s.push(v);
 		visited[v] = true;
 		System.out.printf("  %c", v+65);
-		while(s.top != null) {
+		while(!s.isEmpty()) {
 			w = head[v];
 			while(w != null) {
 				if(!visited[w.vertex]) {

@@ -1,7 +1,7 @@
 package graphTraversal.stackDFS;
 
 public class LinkedStack {
-	public StackNode top;
+	private StackNode top;
 	
 	public LinkedStack() {
 		this.top = null;
